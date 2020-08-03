@@ -1,10 +1,10 @@
 {
   "name": "tag-generator-request",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sole purpose is to process URL requests to try and pull webpages for tag generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node request.js"
   },
   "author": "",
   "license": "ISC",
