@@ -2,6 +2,7 @@ const express = require('express');
 const https = require('https');
 const app = express();
 const port = 3000;
+app.use(allowCrossDomain)
 
 
 app.get('/', (req, res) => { 
