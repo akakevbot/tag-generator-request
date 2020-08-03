@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/url/*', (req, res) => {
-    if (!req.header('tag') == 'generator'){
+    if (!req.header('tag') || req.header('tag') != 'generator'){
         res.send("It doesn't look like you have access to this app. :/");
     }else{
         //res.send(req.url.split('url/')[1]);
