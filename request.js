@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
-app.options('*', cors()); // this will enable cors for all your route.
+app.options('*', cors()); //enable cors for all routes.
 
 app.get('/', (req, res) => { 
     res.send("This is the home page");    
@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 app.get('/url/*', (req, res) => {
     if (!req.header('tag') == 'generator'){
         res.send("It doesn't look like you have access to this app. :/");
-    }
-    //res.send(req.url.split('url/')[1]);
+    }else{
+        //res.send(req.url.split('url/')[1]);
     function getURL(url){
         var opts = require('url').parse(url);
         opts.headers = {
@@ -41,6 +41,7 @@ app.get('/url/*', (req, res) => {
     
     }
     getURL(req.url.split('url/')[1])
+    }
 })
 
 // app.post('/', function (req, res) {
