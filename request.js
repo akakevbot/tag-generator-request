@@ -9,6 +9,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/url/*', (req, res) => {
+    if (!req.header('tag') == 'generator'){
+        res.send("It doesn't look like you have access to this app. :/");
+    }
     //res.send(req.url.split('url/')[1]);
     function getURL(url){
         var opts = require('url').parse(url);
