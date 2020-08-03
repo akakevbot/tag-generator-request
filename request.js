@@ -4,7 +4,9 @@ const app = express();
 const port = 3000;
 
 
-
+app.get('/', (req, res) => { 
+    res.send("This is the home page");    
+})
 
 app.get('/url/*', (req, res) => {
     //res.send(req.url.split('url/')[1]);
