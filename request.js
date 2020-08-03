@@ -44,6 +44,6 @@ app.get('/url/*', (req, res) => {
 //     res.send(req.query.id)
 //   })
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+app.listen(process.env.PORT || 5000, () => {
+    console.log(`Should be listening`)
 })
